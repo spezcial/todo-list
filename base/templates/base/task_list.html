@@ -10,6 +10,11 @@
 
 <a href= "{% url 'task-create' %}">Добавить напоминание</a>
 
+<form method="GET">
+    <input type='text' name="search-area" value="{{search_input}}">
+    <input type="submit" value="Поиск">
+</form>
+
 <table>
     <tr>
         <th>Item</th>
