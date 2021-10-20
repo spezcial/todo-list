@@ -1,4 +1,13 @@
+{% if request.user.is_authenticated %}
+<p>{{request.user}}</p>
+<a href="{% url 'logout' %}">Выйти</a>
+{% else %}
+<a href="% url 'login' %">Вход</a>
+{% endif %}
+
+<hr>
 <h1>Мой To-Do лист</h1>
+
 <a href= "{% url 'task-create' %}">Добавить напоминание</a>
 
 <table>
