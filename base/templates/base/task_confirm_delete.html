@@ -1,0 +1,6 @@
+<a href="{% url 'tasks' %}">Назад</a>
+<form method="POST">
+    {% csrf_token %}
+    <p>Вы точно хотите удалить напоминание? "{{task}}"</p>
+    <input value="Удалить" type="submit">
+</form>
